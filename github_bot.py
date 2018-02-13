@@ -102,6 +102,7 @@ def message(ws, message):
             }))
 
 token = os.environ['TOKEN']
+print('Token:', token)
 get_url = requests.get('https://slack.com/api/rtm.connect?token=' + token)
 print(get_url.json()['url'])
 socket_endpoint = get_url.json()['url']
