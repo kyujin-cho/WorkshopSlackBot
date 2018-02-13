@@ -100,7 +100,7 @@ def message(ws, message):
                 'text': 'User removed'
             }))
 
-token = 'xoxb-314342969014-hx7ffXF9PKvjqtMdtvAcFAx4'
+token = "SOME_TOKEN"
 get_url = requests.get('https://slack.com/api/rtm.connect?token=' + token)
 print(get_url.json()['url'])
 socket_endpoint = get_url.json()['url']
