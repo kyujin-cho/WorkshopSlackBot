@@ -1,1 +1,1 @@
-web:github_bot.py
+web:python github_bot.py
