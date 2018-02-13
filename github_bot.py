@@ -4,6 +4,7 @@ import json
 import time
 import threading
 from dateutil import parser
+import os
 
 threads = {}
 
@@ -100,7 +101,7 @@ def message(ws, message):
                 'text': 'User removed'
             }))
 
-token = "SOME_TOKEN"
+token = os.environ['TOKEN']
 get_url = requests.get('https://slack.com/api/rtm.connect?token=' + token)
 print(get_url.json()['url'])
 socket_endpoint = get_url.json()['url']

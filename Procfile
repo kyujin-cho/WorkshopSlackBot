@@ -1,1 +1,1 @@
-web:python github_bot.py
+ slackbot: python github_bot.py
