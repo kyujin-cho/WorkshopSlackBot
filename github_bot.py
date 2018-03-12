@@ -100,14 +100,3 @@ def message(ws, message):
                 'type': 'message',
                 'text': 'User removed'
             }))
-
-token = os.environ['TOKEN']
-get_url = requests.get('https://slack.com/api/rtm.connect?token=' + token)
-print(get_url.json()['url'])
-socket_endpoint = get_url.json()['url']
-print('Connecting to', socket_endpoint)
-
-websocket.enableTrace(True)
-ws = websocket.WebSocketApp(socket_endpoint, on_message=message)
-
-ws.run_forever()
